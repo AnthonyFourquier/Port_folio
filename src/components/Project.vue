@@ -22,13 +22,13 @@
         </div>
         <div class="card1-link"><a id="link">Voir le projet</a></div>
       </div>
-      <div class="card1-img">
+      <div  class="card1-img transform-image">
         <img src="../assets/mockup_frenchtech.png" />
       </div>
     </div>
     <div id="menu-project" style="height:120px"></div>
     <div id="animate2"  class="card1 cardResp">
-      <div class="card2-img ">
+      <div class="card2-img transform-image">
        <!--  changer d'image mockup pr avoir la meme reso -->
         <img id="img2" src="../assets/mockup_wanderlust.png" />
       </div>
@@ -75,7 +75,7 @@
         </div>
         <div  class="card1-link"><a id="link">Voir le projet</a></div>
       </div>
-      <div  class="card1-img">
+      <div  class="card1-img transform-image">
         <img src="../assets/mockup_trelloskill2.png" />
       </div>
     </div>
@@ -165,6 +165,11 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.transform-image:hover{
+  transform: scale(1.15);
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
+}
 .transform-container:hover{
   transform: scale(1.15);
   transition-duration: 1s;
@@ -232,6 +237,7 @@ export default {
   max-width: 774.13px;
   max-height: 543px;
   margin-left: -104px;
+  transition: all 0.5s;
 }
 .card1-type {
   font-family: Raleway;
@@ -274,6 +280,7 @@ export default {
 .card2-img {
   max-width: 774.13px;
   max-height: 543px;
+  transition: all 0.5s;
 }
 .card2-text {
   width: 628px;

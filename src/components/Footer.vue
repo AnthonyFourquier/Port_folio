@@ -1,19 +1,19 @@
 <template>
   <div id="footer">
     <div style="height:5px"></div>
-    <button><a
+    <a
                     id="link"
                     href="https://www.linkedin.com/in/anthony-fourquier"
                     target="_blank"
-                  ><i class="fab fa-linkedin-in "></i></a></button>
-    <button><a
+                  ><button id="btnlinkedin"><i class="fab fa-linkedin-in "></i></button></a>
+    <a
                     id="link"
                     href="https://www.github.com/AnthonyFourquier"
                     target="_blank">
-                   <i class="fab fa-github"></i></a></button>
-    <button><i class="fab fa-instagram"></i></button>
-    <button><a id="link" href="mailto:fourquier.anthony@hotmail.fr"><i class="fas fa-at"></i></a></button>
-    <button><a id="link" href="tel:+0627575561"><i class="fas fa-phone"></i></a></button>
+                  <button id="btngithub"> <i class="fab fa-github"></i></button></a>
+   <!--  <button><i class="fab fa-instagram"></i></button> -->
+    <a id="link" href="mailto:fourquier.anthony@hotmail.fr"><button id="btnmail"><i class="fas fa-at"></i></button></a>
+    <a id="link" href="tel:+0627575561"><button id="btnphone"><i class="fas fa-phone"></i></button></a>
    <div style="height:5px"></div>
   </div>
 </template>
@@ -28,7 +28,7 @@ export default {
 #footer{
 position: fixed;
 width: 54px;
-height: 250px;
+height: 200px;
 right: 4vh;
 bottom: 10vh;
 background: rgba(0, 0, 0, 0.24);
@@ -49,6 +49,10 @@ width: 38px;
 height: 38px;
 margin: auto;
 transition: all 0.5s;
+cursor: pointer;
+}
+a{
+  margin: auto;
 }
 i{
   margin: auto;
@@ -67,7 +71,38 @@ button:hover{
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
 }
-
+#btngithub:hover:after{
+  content: "Github";
+  position: absolute;
+  right: 120%;
+  background:rgba(23, 23, 23, 0.5);
+  padding: 5px;
+  border-radius: 3px;
+}
+#btnlinkedin:hover:after{
+  content: "Linkedin";
+  position: absolute;
+  right: 120%;
+  background:rgba(23, 23, 23, 0.5);
+  padding: 5px;
+  border-radius: 3px;
+}
+#btnmail:hover:after{
+  content: "Mail";
+  position: absolute;
+  right: 120%;
+  background:rgba(23, 23, 23, 0.5);
+  padding: 5px;
+  border-radius: 3px;
+}
+#btnphone:hover:after{
+  content: "Téléphone";
+  position: absolute;
+  right: 120%;
+  background:rgba(23, 23, 23, 0.5);
+  padding: 5px;
+  border-radius: 3px;
+}
 @media screen and (max-width: 500px) {
   #footer{
     display: none;

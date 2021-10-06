@@ -205,9 +205,10 @@
         </div>
       </div>
       <div class="btnResp">
-        <a id="link" href="../assets/fourquier_anthony_cv.pdf" download>
+        <a id="link" href="../assets/FourquierAnthonyCv.pdf" download="FourquierAnthonyCv.pdf">
           <button class="download"><span>télécharger cv</span></button>
         </a>
+
       </div>
       <div class="container-bar-progress-back">
          <div class="softskill-back"><h1>Compétences Back</h1></div>
@@ -249,7 +250,7 @@
         </div>
       </div>
     </div>
-    <div class="margin-bottom" style="height:120px"></div>
+    <div class="margin-bottom" style="height:40px"></div>
   </div>
 </template>
 <script>
@@ -758,6 +759,7 @@ button {
   text-align: center;
   letter-spacing: 0.4px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 button span{

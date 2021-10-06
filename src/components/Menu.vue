@@ -22,7 +22,7 @@
             md-label="Projets"
             href="#project-menu"
           ></md-tab>
-          <md-tab id="tab-cv" md-label="CV" href="#menu-cv" ></md-tab>
+          <md-tab id="tab-cv" md-label="CV" href="#cv" ></md-tab>
          <!--  <md-tab id="tab-Contact " md-label="Contact" href="#about"></md-tab> -->
              
         </md-tabs>
