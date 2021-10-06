@@ -5,7 +5,7 @@
       <div class="container-soft-contact">
         <div class="contact">
           <div class="title-contact"><h1>Contact</h1></div>
-          <div class="container-contact">
+          <div class="container-contact transform-container">
             <div class="container-adress">
               <div class="margin-icon">
                 <i class="fas fa-map-marker-alt"></i>
@@ -61,7 +61,8 @@
         </div>
         <div class="softskill">
           <div class="title-softskill"><h1>Qualités</h1></div>
-          <div class="container-softkill">
+        
+          <div class="container-softkill transform-container">
               <div class="autonomy">
                 Autonome : organisé et discipliné
               </div>
@@ -86,7 +87,7 @@
 
       <div class="profil ">
         <div class="title-profil"><h1>Profil</h1></div>
-        <div class="container-profil md-elevation-8">
+        <div class="container-profil md-elevation-8 transform-container">
           <div><img src="../assets/photo.png" class="photo" /></div>
           <div class="border"></div>
           <div class="synopsis">
@@ -105,7 +106,7 @@
       </div>
       <div class="formation">
         <div class="title-formation"><h1>Formations</h1></div>
-        <div class="container-formation">
+        <div class="container-formation  transform-container">
           <div class="bocalacademy">
             <div class="info">
               <div><img src="../assets/bocalacademy.png" class="logo" /></div>
@@ -204,8 +205,8 @@
         </div>
       </div>
       <div class="btnResp">
-        <a href="../assets/fourquier_anthony_cv.pdf" download>
-          <button class="download">télécharger le cv</button>
+        <a id="link" href="../assets/fourquier_anthony_cv.pdf" download>
+          <button class="download"><span>télécharger cv</span></button>
         </a>
       </div>
       <div class="container-bar-progress-back">
@@ -248,6 +249,7 @@
         </div>
       </div>
     </div>
+    <div class="margin-bottom" style="height:120px"></div>
   </div>
 </template>
 <script>
@@ -318,46 +320,46 @@ export default {
         let positionId = id.scrollTop ;
       if(scrollValue > positionId){
          var intval = setInterval(() => {
-      if (this.percentagehtml < 75) this.percentagehtml += 1;
+      if (this.percentagehtml < 85) this.percentagehtml += 1;
       else clearInterval(intval);
-    }, 50);
+    }, 80);
      var intval1 = setInterval(() => {
-      if (this.percentagecss < 75) this.percentagecss += 1;
+      if (this.percentagecss < 85) this.percentagecss += 1;
       else clearInterval(intval1);
-    }, 50);
+    }, 80);
 
     var intval2 = setInterval(() => {
       if (this.percentagephp < 75) this.percentagephp += 1;
       else clearInterval(intval2);
-    }, 50);
+    }, 80);
 
     var intval3 = setInterval(() => {
-      if (this.percentagemysql < 75) this.percentagemysql += 1;
+      if (this.percentagemysql < 85) this.percentagemysql += 1;
       else clearInterval(intval3);
-    }, 50);
+    }, 80);
 
     var intval4 = setInterval(() => {
-      if (this.percentagejs < 75) this.percentagejs += 1;
+      if (this.percentagejs < 70) this.percentagejs += 1;
       else clearInterval(intval4);
-    }, 50);
+    }, 80);
 
     var intval5 = setInterval(() => {
       if (this.percentagewp < 75) this.percentagewp += 1;
       else clearInterval(intval5);
-    }, 50);
+    }, 80);
 
     var intval6 = setInterval(() => {
-      if (this.percentagevuejs < 75) this.percentagevuejs += 1;
+      if (this.percentagevuejs < 70) this.percentagevuejs += 1;
       else clearInterval(intval6);
-    }, 50);
+    }, 80);
 
     var intval7 = setInterval(() => {
-      if (this.percentagelaravel < 75) this.percentagelaravel += 1;
+      if (this.percentagelaravel < 85) this.percentagelaravel += 1;
       else clearInterval(intval7);
-    }, 50);
+    }, 80);
       }
       
-      if( scrollValue < 3000){
+      if( scrollValue < 3200){
         this.percentagehtml = 0;
         this.percentagecss = 0;
         this.percentagelaravel = 0;
@@ -374,7 +376,7 @@ export default {
          let scrollValue =
         document.body.scrollTop || document.documentElement.scrollTop;
         let animateCvId = document.getElementById("cv");
-        if(scrollValue > 2800){
+        if(scrollValue > 2700){
           animateCvId.classList.add('animateCv');
         }
         else
@@ -399,12 +401,14 @@ export default {
   
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 #link {
   text-decoration: none;
   color: #00314c;
 }
-
+.adaptation, .analytic, .curious, .teamwork, .autonomy{
+ margin-left: 17.5%;
+}
 .margin-icon {
   margin-top: 5px;
   margin-left: 5% ;
@@ -412,7 +416,7 @@ export default {
 .container-adaptation {
   display: flex;
   flex-direction: row;
- 
+
 }
 .container-analytic {
   display: flex;
@@ -495,11 +499,12 @@ export default {
   background-color: white;
   margin-top: 1%;
   padding: 8px;
+  color: #00314c;
+   transition: all 0.5s;
 }
 .photo {
   height: 200px;
   width: 200px;
-
   margin-bottom: 7.5%;
   margin-top: 5%;
 }
@@ -514,7 +519,8 @@ export default {
   text-align: left;
   margin-top: 1%;
   padding: 10px;
-  
+  color: #00314c;
+   transition: all 0.5s;
 }
 
 .container-contact {
@@ -523,11 +529,27 @@ export default {
   border: 1px solid white;
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
   background-color: white;
+  color: #00314c;
   margin-top: 1%;
   padding: 10px;
   margin-bottom: 25px;
-
+  transition: all 0.5s;
 }
+.transform-container:hover{
+  transform: scale(1.15);
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
+    background-color: #00314c;
+    color: white;
+    border: none;
+    
+    #link{
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
+      color: white;
+    }
+}
+
 
 .autonomy,
 .curious,
@@ -659,16 +681,6 @@ export default {
  
 }
 
-
-.wanderlust,
-.frenchtech,
-.trelloskill,
-.bocalacademy,
-.universite,
-.management {
-  border: 1px solid white;
-  background-color: white;
-}
 .bocalacademy,
 .universite,
 .management {
@@ -696,12 +708,16 @@ export default {
   
 }
 .container-formation {
+  color: #00314c;
+  background-color: white;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+   transition: all 0.5s;
 }
 #cv {
   margin-top: 80px;
   width: 85%;
   margin: auto;
+
 }
 .logo2 {
   width: 60px;
@@ -725,35 +741,56 @@ export default {
   margin: auto;
 }
 
-.download:hover {
+
+button {
+  display: block;
   height: 175px;
   width: 175px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: 2px solid white;
-  color: white;
-  font-weight: bold;
-  background-color: #00314c;
+  text-decoration: none;
   text-align: center;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-}
-.download {
-  height: 175px;
-  width: 175px;
-  border-radius: 50%;
-  cursor: pointer;
+  position: relative;
+  transition: all .1s;
   border: 2px solid #00314c;
   background-color: white;
+  border-radius: 50%;
   color: #00314c;
   font-weight: bold;
   text-align: center;
   letter-spacing: 0.4px;
   text-transform: uppercase;
 }
+
+button span{
+  position: relative;
+  z-index: 2;
+}
+
+button:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #00314c;
+  transition-duration: 0.35s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
+ 
+}
+
+button:hover{
+  color: #fff;
+  border: 2px solid white;
+}
+
+button:hover:after{
+  width: 100%;
+}
+
 .animateCv{
-  animation-name: animate-cv ;
-  animation-duration: 3s;
+  animation: animate-cv 0.5s, animate2-cv 1s ;
+  animation-timing-function: 	cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 @keyframes animate-bar {
   0% {
@@ -771,10 +808,20 @@ export default {
     opacity: 1;
   }
 }
+@keyframes animate2-cv {
+  from {
+    margin-top: 100%; 
+  }
+
+  to {
+    margin-top: 0%;
+  }
+}
 @media screen and (max-width: 500px) {
   .animateCv{
-  animation-name: no ;
+  animation: no ;
   }
+
   #cv{
     width: 90%;
     margin: auto;
@@ -814,6 +861,10 @@ export default {
     height: 25px;
     border-radius: 0;
     font-size: 10px;
+    margin: auto;
+  }
+  .download:after{
+     border-radius: 0;
   }
   .btnResp{
     padding-top: 50px;
@@ -837,7 +888,7 @@ export default {
   .container-formation,  p  {
     margin: 0;
     padding-bottom: 10px;
-    background: white;
+   
   }
 
 .bocalacademy p, .universite p, .management p{
@@ -859,7 +910,7 @@ export default {
 }
 @media screen and (min-width: 501px) and (max-width: 1024px) {
   .animateCv{
-  animation-name: no ;
+  animation: no ;
   }
   #cv{
     width: 90%;
@@ -908,6 +959,7 @@ export default {
     margin-top: 25px;
   }
   .download{
+    margin: auto;
     margin-top: 25px;
   }
 }

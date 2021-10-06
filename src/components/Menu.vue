@@ -23,7 +23,7 @@
             href="#project-menu"
           ></md-tab>
           <md-tab id="tab-cv" md-label="CV" href="#menu-cv" ></md-tab>
-          <md-tab id="tab-Contact " md-label="Contact" href="#about"></md-tab>
+         <!--  <md-tab id="tab-Contact " md-label="Contact" href="#about"></md-tab> -->
              
         </md-tabs>
         <md-button
@@ -115,7 +115,7 @@ export default {
     },
     colorOnScroll: {
       type: Number,
-      default: 900,
+      default: 550,
     },
   },
   data: () => ({

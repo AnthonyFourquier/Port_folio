@@ -43,7 +43,9 @@ export default {
 };
 </script>
 <style scoped>
-
+#about{
+display: none;
+}
 .md-field.md-theme-default:before{
   background-color: #00314c;
 }

@@ -2,8 +2,8 @@
   <div id="project">
     <div id="menu-project" style="height:40vh"></div>
     <div id="project-menu" style="height:100px"></div>
-    <div id="animate" class="card1">
-      <div class="card1-text">
+    <div id="animate" class="card1 ">
+      <div class="card1-text transform-container">
         <div class="card1-type">PROJETS</div>
         <div class="card1-title">French Tech Cote d'Azur</div>
         <div class="card1-synopsis">
@@ -32,7 +32,7 @@
        <!--  changer d'image mockup pr avoir la meme reso -->
         <img id="img2" src="../assets/mockup_wanderlust.png" />
       </div>
-      <div class="card2-text inverted">
+      <div class="card2-text transform-container-inverted">
         <div class="card1-type type-resp">PROJETS</div>
         <div class="card1-title">Wanderlust</div>
         <div class="card1-synopsis">
@@ -54,7 +54,7 @@
     </div>
     <div id="menu-project" style="height:120px"></div>
     <div id="animate3" class="card1 card1-resp ">
-      <div class="card1-text">
+      <div class="card1-text transform-container">
         <div class="card1-type">PROJETS</div>
         <div class="card1-title">TrelloSkill</div>
         <div class="card1-synopsis">
@@ -122,7 +122,7 @@ export default {
       let idAnimate = document.getElementById("animate");
       let positionAnimate = idAnimate.scrollTop;
       if (positionAnimate < scrollValue) {
-        idAnimate.classList.add("animation1");
+        idAnimate.classList.add("animation1") ;
       } else idAnimate.classList.remove("animation1");
     },
     animate2ProjectScroll() {
@@ -137,7 +137,7 @@ export default {
       let scrollValue =
         document.body.scrollTop || document.documentElement.scrollTop;
       let idAnimate1 = document.getElementById("animate3");
-      if ( 1800< scrollValue) {
+      if ( 1900< scrollValue) {
        
         idAnimate1.classList.add("animation1");
       } else idAnimate1.classList.remove("animation1");
@@ -164,7 +164,46 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
+.transform-container:hover{
+  transform: scale(1.15);
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
+    background-color: #00314c;
+    color: white;
+    border: none;
+    
+    .card1-type, .card1-skill{
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
+      color: white;
+    }
+  #link{
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
+      color: white;
+    }
+}
+.transform-container-inverted:hover{
+  transform: scale(1.15);
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
+    background-color: white;
+    color: #00314c;
+    border: none;
+    
+    .card1-type, .card1-skill{
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
+      color: #00314c;
+    }
+  #link{
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
+      color: #00314c;
+    }
+}
+
 #project{
   width: 80%;
   margin: auto;
@@ -174,7 +213,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  
+  opacity: 0;
  
 }
 .card1-text {
@@ -187,6 +226,7 @@ export default {
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
   margin-top: 104px;
   z-index: 1;
+   transition: all 0.5s;
 }
 .card1-img {
   max-width: 774.13px;
@@ -235,18 +275,28 @@ export default {
   max-width: 774.13px;
   max-height: 543px;
 }
-
 .card2-text {
   width: 628px;
   height: 584px;
   display: flex;
   flex-direction: column;
   text-align: left;
-  background: #ffffff;
+  background: #00314c;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   margin-top: 104px;
   margin-left: -104px;
   z-index: 1;
+  color: white;
+   transition: all 0.5s;
+  .card1-type {
+    color: white;
+  }
+  .card1-skill {
+    color: white;
+  }
+  .card1-link #link {
+    color: white;
+  }
 }
 #link {
   color: #00314c;
@@ -257,56 +307,35 @@ export default {
   line-height: 32px;
   letter-spacing: 0.4px;
 }
-.card2-text.inverted {
-  background: #00314c;
-  color: white;
-}
-.inverted .card1-type {
-  color: white;
-}
-.inverted .card1-skill {
-  color: white;
-}
-.inverted .card1-link #link {
-  color: white;
-}
+
 .animation1 {
-  animation-duration:  2s ;
-  animation-name: slidein;
-  animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+ animation: opacity 0.5s, slidein 1s ;
+  animation-timing-function: 	cubic-bezier(0.4, 0.0, 0.2, 1);
+  opacity: 1;
 }
-.animation2 {
-  animation-duration: 2s;
-  animation-name: slideout;
-  animation-direction: reverse;
-}
+
 @keyframes slidein {
   from {
-    margin-left: 100%;
-    width: 300%;
-    
+    margin-top: 100%; 
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    margin-top: 0%;
   }
 }
-@keyframes slideout {
+@keyframes opacity {
   from {
-    margin-left: 100%;
-    width: 300%;
+    opacity: 0;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+   opacity: 1;
   }
 }
 
 @media screen and (max-width: 500px) {
   .animation1{
-    animation-name: none;
+    animation: none;
   }
  .card1-resp{
     margin-bottom: -150px;
@@ -327,6 +356,7 @@ export default {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    opacity: 1;
   }
   .card1-text{
     margin-bottom: 0;

@@ -31,14 +31,13 @@ width: 54px;
 height: 250px;
 right: 4vh;
 bottom: 10vh;
-
-
 background: rgba(0, 0, 0, 0.24);
 border-radius: 27px;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
 z-index: 2;
+transition: all 0.5s;
 }
 button{
 background: rgba(23, 23, 23, 0.5);
@@ -49,6 +48,7 @@ border-radius: 75px;
 width: 38px;
 height: 38px;
 margin: auto;
+transition: all 0.5s;
 }
 i{
   margin: auto;
@@ -57,9 +57,20 @@ i{
   text-decoration: none;
   color: white;
 }
+#footer:hover{
+  transform: scale(1.5);
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
+}
+button:hover{
+    transform: scale(1.25);
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
+}
 
 @media screen and (max-width: 500px) {
   #footer{
+    display: none;
     max-width: 90%;
     margin: auto;
     top: 50px;
