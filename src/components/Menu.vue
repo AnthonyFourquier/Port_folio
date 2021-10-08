@@ -223,25 +223,7 @@ export default {
     overflow: hidden;
   }
 
-@media screen and (max-width: 500px) {
-  .md-content.md-theme-default {
-    width: 375px;
-  }
-  .page-container{
-    max-width: 375px;
-  }
-  #toolbar{
-    max-width: 375px;
-  }
-  .md-resp{
-    max-width: 375px;
-  }
-  .md-toolbar-row{
-    max-width: 375px;
-
-  }
-}
-@media screen and (min-width: 501px) and (max-width: 1024px) {
+@media (max-width:991px) {
   .md-content.md-theme-default {
   width: 100%;
   }
@@ -262,5 +244,24 @@ export default {
     position: absolute;
     right: 10px;
     }
+}
+
+@media (max-width: 767px) {
+  .md-content.md-theme-default {
+    width: 100%;
+  }
+  .page-container{
+    max-width: 100%;
+  }
+  #toolbar{
+    max-width: 100%;
+  }
+  .md-resp{
+    max-width: 100%;
+  }
+  .md-toolbar-row{
+    max-width: 100%;
+
+  }
 }
 </style>

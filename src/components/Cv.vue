@@ -403,6 +403,14 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+/* 
+.title-contact, .title-profil{
+  margin-bottom: 10%;
+}
+.title-formation {
+  margin-bottom: auto;
+}
+*/
 #link {
   text-decoration: none;
   color: #00314c;
@@ -417,7 +425,6 @@ export default {
 .container-adaptation {
   display: flex;
   flex-direction: row;
-
 }
 .container-analytic {
   display: flex;
@@ -426,12 +433,10 @@ export default {
 .container-curious {
   display: flex;
   flex-direction: row;
- 
 }
 .container-autonomy {
   display: flex;
   flex-direction: row;
-  
 }
 .container-adress {
   display: flex;
@@ -445,28 +450,22 @@ export default {
   display: flex;
   flex-direction: row;
   margin-left:2px;
- 
 }
 .container-licence {
   display: flex;
   flex-direction: row;
-
 }
 .container-linkedin {
   display: flex;
   flex-direction: row;
- 
 }
 .container-github {
   display: flex;
   flex-direction: row;
-
 }
-
 .container-soft-contact {
   width: 25%;
 }
-
 .container-bar-progress {
   display: flex;
   flex-direction: row;
@@ -488,7 +487,6 @@ export default {
   width: 25%;
 }
 .synopsis {
-
   margin-left: auto;
   padding: 10px;
 }
@@ -503,6 +501,7 @@ export default {
   color: #00314c;
    transition: all 0.5s;
 }
+
 .photo {
   height: 200px;
   width: 200px;
@@ -713,6 +712,7 @@ export default {
   background-color: white;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
    transition: all 0.5s;
+   padding: 5px;
 }
 #cv {
   margin-top: 80px;
@@ -819,7 +819,77 @@ button:hover:after{
     margin-top: 0%;
   }
 }
-@media screen and (max-width: 500px) {
+
+@media (max-width: 991px) {
+  .animateCv{
+  animation: no ;
+  }
+  #cv{
+    width: 90%;
+    margin: auto;
+  }
+  .container-row1{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    width: 93%;
+  }
+  .container-row1{
+    justify-content: space-between;
+    margin-top: -50px;
+  }
+  .container-soft-contact{
+    width: 45%;
+  }
+  .container-adress, .container-mail, .container-phone, .container-licence, .container-linkedin, .container-github{
+    padding: 3px;
+  }
+ .adaptation, .analytic, .curious, .teamwork, .autonomy{
+ margin-left: 2.5%;
+}
+.margin-icon{
+  margin-top: 0;
+}
+  .profil{
+    width: 50%;
+  }
+  .container-contact{
+    width: 100%;
+    line-height: 25px;
+  }
+  .title-formation{
+    margin-left: 60%;
+    margin-top: 50px;
+  }
+  .container-formation{
+   margin-left: 32.5%;
+   width: 100%;
+  }
+  .container-bar-progress-back{
+    margin-bottom: 150px;
+  }
+  .container-bar-progress{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .loading-bar{
+    margin: auto;
+    margin-top:3% ;
+  }
+  .softskill-front,.softskill-back{
+    margin-top: 25px;
+  }
+  .download{
+    margin: auto;
+    margin-top: 25px;
+  }
+  
+}
+@media (max-width: 767px) {
   .animateCv{
   animation: no ;
   }
@@ -828,7 +898,7 @@ button:hover:after{
     width: 90%;
     margin: auto;
   }
-
+ 
   .container-row1, .container-bar-progress{
    display: flex;
    flex-direction: column;
@@ -860,16 +930,16 @@ button:hover:after{
     margin-top: 50px;
   }
   .download{
-    height: 25px;
-    border-radius: 0;
+    height: 100px;
+    width: 100px;
     font-size: 10px;
     margin: auto;
+   
+    line-height: 15px;
   }
-  .download:after{
-     border-radius: 0;
-  }
+  
   .btnResp{
-    padding-top: 50px;
+    padding-top: 30px;
   }
   .loading-bar{
     width: 100%;
@@ -881,11 +951,17 @@ button:hover:after{
   .title-contact, .title-profil, .title-softskill{
     margin-left: 0;
   }
+  .container-bar-progress-back h1{
+    margin-top: 0;
+  }
   h1{
     text-align: center;
   }
   .title-softskill, .title-profil, .title-formation{
     margin-top: 75px;
+  }
+   .title-formation{
+    margin-left: 0;
   }
   .container-formation,  p  {
     margin: 0;
@@ -909,60 +985,8 @@ button:hover:after{
 .name, .name2, .name3{
   padding-bottom: 15px;
  }
-}
-@media screen and (min-width: 501px) and (max-width: 1024px) {
-  .animateCv{
-  animation: no ;
-  }
-  #cv{
-    width: 90%;
-    margin: auto;
-  }
-  .container-row1{
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  .container-row1{
-    justify-content: space-between;
-    margin-top: -50px;
-  }
-  .container-soft-contact{
-    width: 45%;
-  }
-  .profil{
-    width: 50%;
-  }
-  .container-contact{
-    width: 100%;
-  }
-  .title-formation{
-    margin-left: 60%;
-    margin-top: 50px;
-  }
-  .container-formation{
-   margin-left: 32.5%;
-   width: 100%;
-  }
-  .container-bar-progress{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 50px;
-  }
-  .loading-bar{
-    margin: auto;
-    margin-top:3% ;
-  }
-  .softskill-front,.softskill-back{
-    margin-top: 25px;
-  }
-  .download{
-    margin: auto;
-    margin-top: 25px;
+  .container-bar-progress-back{
+    margin-bottom: 0px;
   }
 }
 </style>

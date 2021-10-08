@@ -103,21 +103,22 @@ button:hover{
   padding: 5px;
   border-radius: 3px;
 }
-@media screen and (max-width: 500px) {
+
+@media  (max-width: 991px) {
+   #footer{
+    margin: auto;
+    max-width: 90%;
+    top: 120px;
+    right: 10px;
+  }
+}
+@media (max-width: 767px) {
   #footer{
     display: none;
     max-width: 90%;
     margin: auto;
     top: 50px;
     right: 15px;
-  }
-}
-@media screen and (min-width: 501px) and (max-width: 1024px) {
-   #footer{
-    margin: auto;
-    max-width: 90%;
-    top: 120px;
-    right: 10px;
   }
 }
 </style>

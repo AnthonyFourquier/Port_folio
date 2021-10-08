@@ -53,7 +53,7 @@
       </div>
     </div>
     <div id="menu-project" style="height:120px"></div>
-    <div id="animate3" class="card1 card1-resp ">
+    <div id="animate3" class="card1 card2-resp ">
       <div class="card1-text transform-container">
         <div class="card1-type">PROJETS</div>
         <div class="card1-title">TrelloSkill</div>
@@ -178,36 +178,36 @@ export default {
     color: white;
     border: none;
     
-    .card1-type, .card1-skill{
+.card1-type, .card1-skill{
   transition-duration: 1s;
   transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
-      color: white;
-    }
-  #link{
+  color: white;
+  }
+#link{
   transition-duration: 1s;
   transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
-      color: white;
-    }
+  color: white;
+}
 }
 .transform-container-inverted:hover{
   transform: scale(1.15);
   transition-duration: 1s;
   transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
-    background-color: white;
-    color: #00314c;
-    border: none;
+  background-color: white;
+  color: #00314c;
+  border: none;
     
-    .card1-type, .card1-skill{
-  transition-duration: 1s;
-  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
-      color: #00314c;
-    }
+  .card1-type, .card1-skill{
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
+    color: #00314c;
+  }
   #link{
-  transition-duration: 1s;
-  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
-      color: #00314c;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
+    color: #00314c;
     }
-}
+  }
 
 #project{
   width: 80%;
@@ -231,7 +231,7 @@ export default {
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
   margin-top: 104px;
   z-index: 1;
-   transition: all 0.5s;
+  transition: all 0.5s;
 }
 .card1-img {
   max-width: 774.13px;
@@ -294,7 +294,7 @@ export default {
   margin-left: -104px;
   z-index: 1;
   color: white;
-   transition: all 0.5s;
+  transition: all 0.5s;
   .card1-type {
     color: white;
   }
@@ -316,7 +316,7 @@ export default {
 }
 
 .animation1 {
- animation: opacity 0.5s, slidein 1s ;
+  animation: opac 0.5s, slidein 1s ;
   animation-timing-function: 	cubic-bezier(0.4, 0.0, 0.2, 1);
   opacity: 1;
 }
@@ -330,7 +330,7 @@ export default {
     margin-top: 0%;
   }
 }
-@keyframes opacity {
+@keyframes opac {
   from {
     opacity: 0;
   }
@@ -340,12 +340,43 @@ export default {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width: 991px) {
   .animation1{
-    animation: none;
+    animation-name: none;
   }
- .card1-resp{
-    margin-bottom: -150px;
+   #project{
+    max-width: 90%;
+    margin: auto;  
+  } 
+  .card1{
+    margin-top: -520px;
+    flex-wrap: wrap;
+    opacity: 1;
+  }
+  .card1-text{
+   height: auto;
+  }
+  .card1-img{
+    margin-left: 0;
+    height: auto;
+    
+  }
+   .card2-img{
+    height: auto;
+    width: auto;
+    margin-top: 460px;
+  }
+
+  .card2-text{
+    margin-left: 0;
+    margin-bottom: 360px;
+    height: auto;
+    margin-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .animation1{
+    animation: no;
   }
   #project{
     max-width: 90%;
@@ -356,14 +387,16 @@ export default {
     max-height: 0px;
   }
   #project-menu{
-    max-height: 50px;
+    max-height: 40px;
   }
+  
   .card1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     opacity: 1;
+    margin: auto;
   }
   .card1-text{
     margin-bottom: 0;
@@ -410,49 +443,28 @@ export default {
     width: auto;
   }
   #img2{
-    height: auto;
-    width: auto;
+    height: 175px;
+    width: 300px;
     }
   .cardResp{
     height: auto;
+    margin-top : -500px;
+  }
+  .card1-resp{
+    margin-top: -40px;
+  }
+   .card2-resp{
+    margin-top: -40px;
+    margin-bottom: -40px;
   }
   .card2-text{
     margin: 0;
     padding: 0;
     height: auto;
   }
-}
-@media screen and (min-width: 501px) and (max-width: 1024px) {
-  .animation1{
-    animation-name: none;
+   #menu-cv{
+    max-height: 0px;
   }
-   #project{
-    max-width: 90%;
-    margin: auto;  
-  } 
-  .card1{
-    margin-top: -520px;
-    flex-wrap: wrap;
-  }
-  .card1-text{
-   height: auto;
-  }
-  .card1-img{
-    margin-left: 0;
-    height: auto;
-    
-  }
-   .card2-img{
-    height: auto;
-    width: auto;
-    margin-top: 460px;
-  }
-
-  .card2-text{
-    margin-left: 0;
-    margin-bottom: 360px;
-    height: auto;
-    margin-top: 0;
-  }
+ 
 }
 </style>
