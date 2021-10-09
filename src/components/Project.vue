@@ -49,7 +49,7 @@
             <li>Connection et déconnection sécurisée par un token</li>
           </ul>
         </div>
-        <div class="card1-link"><a id="link">Voir le projet</a></div>
+        <div class="card1-link "><a id="link">Voir le projet</a></div>
       </div>
     </div>
     <div id="menu-project" style="height:120px"></div>
@@ -178,16 +178,11 @@ export default {
     color: white;
     border: none;
     
-.card1-type, .card1-skill{
+.card1-type, .card1-skill, #link{
   transition-duration: 1s;
   transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
   color: white;
   }
-#link{
-  transition-duration: 1s;
-  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
-  color: white;
-}
 }
 .transform-container-inverted:hover{
   transform: scale(1.15);
@@ -197,16 +192,11 @@ export default {
   color: #00314c;
   border: none;
     
-  .card1-type, .card1-skill{
+  .card1-type, .card1-skill, #link{
     transition-duration: 1s;
     transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
     color: #00314c;
   }
-  #link{
-    transition-duration: 1s;
-    transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
-    color: #00314c;
-    }
   }
 
 #project{
@@ -219,6 +209,7 @@ export default {
   flex-direction: row;
   justify-content: center;
   opacity: 0;
+  font-family: Raleway;
  
 }
 .card1-text {
@@ -240,7 +231,6 @@ export default {
   transition: all 0.5s;
 }
 .card1-type {
-  font-family: Raleway;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -301,9 +291,9 @@ export default {
   .card1-skill {
     color: white;
   }
-  .card1-link #link {
+ #link {
     color: white;
-  }
+  } 
 }
 #link {
   color: #00314c;

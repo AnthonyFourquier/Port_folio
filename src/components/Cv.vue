@@ -63,6 +63,7 @@
           <div class="title-softskill"><h1>Qualités</h1></div>
         
           <div class="container-softkill transform-container">
+            <div class="container">
               <div class="autonomy">
                 Autonome : organisé et discipliné
               </div>
@@ -80,6 +81,7 @@
               </div>
               <div class="adaptation">
                 Adaptation : disponible et flexible
+              </div>
               </div>
           </div>
         </div>
@@ -403,21 +405,11 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-/* 
-.title-contact, .title-profil{
-  margin-bottom: 10%;
-}
-.title-formation {
-  margin-bottom: auto;
-}
-*/
 #link {
   text-decoration: none;
   color: #00314c;
 }
-.adaptation, .analytic, .curious, .teamwork, .autonomy{
- margin-left: 17.5%;
-}
+
 .margin-icon {
   margin-top: 5px;
   margin-left: 5% ;
@@ -499,7 +491,7 @@ export default {
   margin-top: 1%;
   padding: 8px;
   color: #00314c;
-   transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .photo {
@@ -521,6 +513,13 @@ export default {
   padding: 10px;
   color: #00314c;
    transition: all 0.5s;
+   -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  .adaptation, .analytic, .curious, .teamwork, .autonomy{
+ margin-left: 15%;
+  line-height: 35px;
+ 
+}
 }
 
 .container-contact {
@@ -534,32 +533,9 @@ export default {
   padding: 10px;
   margin-bottom: 25px;
   transition: all 0.5s;
-}
-.transform-container:hover{
-  transform: scale(1.15);
-  transition-duration: 1s;
-  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
-    background-color: #00314c;
-    color: white;
-    border: none;
-    
-    #link{
-  transition-duration: 1s;
-  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
-      color: white;
-    }
-}
-
-
-.autonomy,
-.curious,
-.teamwork,
-.analytic,
-.adaptation {
-  
-  line-height: 35px;
-}
-.mail,
+   -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  .mail,
 .adress,
 .phone,
 .driving-licence,
@@ -568,6 +544,30 @@ export default {
   margin-left: 10%;
   line-height: 25px;
 }
+}
+.transform-container:hover  {
+  transform: rotateY(180deg);
+   -webkit-transform: rotateY(180deg);
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);  
+    background-color: #00314c;
+    color: white;
+    border: none;
+    
+     .container-adress,.container-mail, .container-phone, .container-licence, .container-linkedin, .container-github, .analytic, .autonomy, .curious,.teamwork,.adaptation, .photo, .synopsis, .bocalacademy, .universite, .management {
+    transform: rotateY(180deg);
+   -webkit-transform: rotateY(180deg); 
+    }
+    
+    #link{ 
+      transform: rotateY(180deg);
+   -webkit-transform: rotateY(180deg);
+      color: white;
+    } 
+    
+}
+
+
 .phone{
   padding-left: 3px;
 }
@@ -718,7 +718,7 @@ export default {
   margin-top: 80px;
   width: 85%;
   margin: auto;
-
+  font-family: Raleway;
 }
 .logo2 {
   width: 60px;
